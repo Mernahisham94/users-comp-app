@@ -55,8 +55,12 @@ export class UsersComponent implements OnInit {
   constructor( ){ }
 
   ngOnInit(): void {
-    
+    this.SortUsersList();
   }
+ SortUsersList = () =>{
+  this.users = this.users.sort((a,b)=>{return a.code.split('.').length-b.code.split('.').length});
 
+  
+ }
 
 }
